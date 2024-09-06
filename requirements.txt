@@ -1,0 +1,11 @@
+statsmodels
+more_itertools
+psutil
+memory_profiler
+pandas
+numpy
+scipy
+pyarrow
+matplotlib
+seaborn
+pympler
