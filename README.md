@@ -42,7 +42,7 @@ This code uses a `Histogram` class, defined in `AproxBLUE.py` that represents a 
 
 The `Histogram` class creates dummy data, but the `NMFHistogram` is an interface-compatible implementation that reads in real Noisy Measurement File (NMF) data  from Census Parquet files and (optionally) SF1 data for true comparison. Information on how to read SF1 data and collate it into tables is in `sf1extract.py`.
 
-Trials so far have used Parquet-formatted NMF files of person counts, e.g., in the `DPQuery` folders at [the 2010 PL 94 noised deomstration product](https://app.globus.org/file-manager?origin_id=c89b5c48-ca65-11ed-8cfb-f9fa098153fc&origin_path=%2F) and [the DHC noised deomstration product](https://app.globus.org/file-manager?origin_id=ab444649-2203-4f65-94d3-62a3268bcdca). Future work could modify the `NMFHistogram` reader to ingest any kind of data.
+Trials so far have used Parquet-formatted NMF files of person counts, e.g., in the `DPQuery` folders at [the 2010 PL 94 noised deomstration product](https://app.globus.org/file-manager?origin_id=c89b5c48-ca65-11ed-8cfb-f9fa098153fc&origin_path=%2F) and [the DHC noised demonstration product](https://app.globus.org/file-manager?origin_id=ab444649-2203-4f65-94d3-62a3268bcdca). Future work could modify the `NMFHistogram` reader to ingest any kind of data.
 
 The `NMFHistogram` ingest process **requires** a `detailed_dpq` row in the Parquet data, and it uses that row to look for smaller tables. Tables with variables names that are not among the detailed marginal variables are omitted. (This is not related to the SEA BLUE methodology, but is only the process for how the reader selects data from Census products for ingest into the SEA BLUE algorithm.)
 
